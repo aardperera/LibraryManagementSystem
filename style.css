@@ -146,10 +146,7 @@ nav li{
     display: inline-block;
     line-height: 80px;
 }
-section{
-    background-image: url(images/background.jpg);
-    background-size: auto;
-}
+
 .box{
     height: 300px;
     width: 450px;
@@ -158,3 +155,4 @@ section{
     opacity: .6;
     color: white;
 }
+
