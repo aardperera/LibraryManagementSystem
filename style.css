@@ -146,7 +146,11 @@ nav li{
     display: inline-block;
     line-height: 80px;
 }
-
+#homeimg{
+    height:450px ;
+    background-image: url(images/background.jpg);
+    background-size: auto;
+}
 .box{
     height: 300px;
     width: 450px;
@@ -156,3 +160,10 @@ nav li{
     color: white;
 }
 
+/*----------------------------------st_login----------------------------------------------------*/
+
+#loginimg{
+    height: 450px;
+    background-image:url(images/stlogimg.jpg);
+    background-size: auto;
+}
