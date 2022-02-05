@@ -166,4 +166,5 @@ nav li{
     height: 450px;
     background-image:url(images/stlogimg.jpg);
     background-size: auto;
+    opacity: .7;
 }
