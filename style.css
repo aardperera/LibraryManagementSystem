@@ -188,6 +188,13 @@ input{
     padding-left: 15px;
 }
 
+.btn-primary{
+    height: 35px;
+    border-color: #02111e;
+    border: 3px;
+    
+}
+
 /*-----------------------------------registration.html-----------------------------------------------------*/
 
 #regimg{
