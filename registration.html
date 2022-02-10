@@ -5,13 +5,17 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width = device-width, initial-scale=1">
-
+ 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
     </head>
     <body>
         <header>
             <div class="logo">
                 <img src="images/logo.jpg" height="100px" width="150px">
-                <h1 style="color: white;">LIBRARY MANAGEMENT SYSTEM</h1>
+                <p style="color: white; font-family: 'Times New Roman', Times, serif;"><b>LIBRARY MANAGEMENT SYSTEM</b></p>
             </div>
 
             <nav>
@@ -26,18 +30,18 @@
         </header>
         <section>
             <div id="regimg">
-                <br>
+               
                 <div class="box3"><br>
-                    <h1 style="text-align: center; font-size: 25px;">SIGN UP</h1><br>
+                    <p style="text-align: center; font-size: 25px;">SIGN UP</p>
                     <form name="registration" action=" " method=" ">
                         <div class="reg">
-                            <input type="text" name="first" placeholder="First Name" required=""> <br><br>
-                            <input type="text" name="last" placeholder="Last Name" required=""> <br><br>
-                            <input type="text" name="indexno" placeholder="Index No" required=""> <br><br>
-                            <input type="text" name="username" placeholder="Username" required=""> <br><br>
-                            <input type="password" name="password" placeholder="Password" required=""><br><br>
-                            <input type="text" name="email" placeholder="Email" required=""> <br><br> 
-                            <button>Sign Up</button>
+                            <input class="form-control" type="text" name="first" placeholder="First Name" required=""> <br>
+                            <input class="form-control" type="text" name="last" placeholder="Last Name" required=""> <br>
+                            <input class="form-control" type="text" name="indexno" placeholder="Index No" required=""> <br>
+                            <input class="form-control" type="text" name="username" placeholder="Username" required=""> <br>
+                            <input class="form-control" type="password" name="password" placeholder="Password" required=""><br>
+                            <input class="form-control" type="text" name="email" placeholder="Email" required=""> <br>
+                            <input class="btn btn-primary" type="submit" name="submit" value="Sign Up">
                         </div>
                     </form>
                    
