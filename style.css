@@ -136,7 +136,7 @@ footer{
 li a{
     color: white;
     text-decoration: none;
-}
+}/*
 nav{
     float: right;
     word-spacing: 30px;
@@ -145,7 +145,7 @@ nav{
 nav li{
     display: inline-block;
     line-height: 80px;
-}
+}*/
 #homeimg{
     height:450px ;
     background-image: url(images/background.jpg);
