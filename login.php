@@ -1,4 +1,5 @@
 <?php
+    include "connection.php";
     include "navbar.php";
 ?>
 
@@ -47,7 +48,7 @@
                 <br><br><br><br>
                 <div class="box2"><br>
                     <h1 style="text-align: center; font-size: 25px;">Login</h1><br>
-                    <form name="login" action=" " method=" ">
+                    <form name="login" action=" " method="post">
                         <div class="login">
                             <input class="form-control" type="text" name="username" placeholder="Username" required=""> <br>
                             <input class="form-control"type="password" name="password" placeholder="Password" required=""><br>
@@ -64,6 +65,33 @@
             </div>
 
         </section>
+
+        <?php
+            if(isset($_POST['submit'])){
+                $count = 0;
+                $res = mysqli_query($db,"SELECT * FROM student WHERE username='$_POST[username]' && password='$_POST[password]';");
+                $count = mysqli_num_rows($res);
+
+                if($count == 0){
+                    ?>
+                        <script type="text/javascript">
+                            alert("The username and password do not match.");
+                        </script>
+                    <?php
+                }else{
+                    ?>
+                        <script type="text/javascript">
+                            window.location = "index.php";
+                        </script>
+                    <?php
+
+                }
+            }
+
+        ?>
+
+
+
         <footer>
 
         </footer>
