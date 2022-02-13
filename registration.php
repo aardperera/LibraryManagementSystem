@@ -53,9 +53,9 @@
                         <div class="reg">
                             <input class="form-control" type="text" name="first" placeholder="First Name" required=""> <br>
                             <input class="form-control" type="text" name="last" placeholder="Last Name" required=""> <br>
-                            <input class="form-control" type="text" name="indexno" placeholder="Index No" required=""> <br>
                             <input class="form-control" type="text" name="username" placeholder="Username" required=""> <br>
                             <input class="form-control" type="password" name="password" placeholder="Password" required=""><br>
+                            <input class="form-control" type="text" name="indexno" placeholder="Index No" required=""> <br>
                             <input class="form-control" type="text" name="email" placeholder="Email" required=""> <br>
                             <input class="form-control" type="text" name="telno" placeholder="Tel No" required=""> <br>
                             <input class="btn btn-primary" type="submit" name="submit" value="Sign Up">
@@ -66,6 +66,36 @@
             </div>
 
         </section>
+
+        <?php
+        
+            if(isset($_POST['submit'])){
+
+                $count = 0;
+                $sql = "SELECT username FROM student";
+                $res = mysqli_query($db,$sql);
+
+                while($row = mysqli_fetch_assoc($res)){
+                    if($row['username']==$_POST['username']){
+                        $count = $count + 1;
+                    }
+                }
+                if($count==0){
+                    mysqli_query($db, "INSERT INTO `STUDENT` VALUES('$_POST[first]', '$_POST[last]','$_POST[username]','$_POST[password]','$_POST[indexno]','$_POST[email]','$_POST[telno]');");
+                    ?>
+                        <script type="text/javascript">
+                            alert("Registration successful!");
+                        </script>
+                    <?php
+                }else{
+                    ?>
+                        <script type="text/javascript">
+                            alert("The username is already exist.");
+                        </script>
+                    <?php
+                }
+            }    
+        ?>
         <footer>
 
         </footer>
