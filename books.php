@@ -10,7 +10,7 @@
     <body>
         <h2>List of Books</h2>
         <?php
-            $res= mysqli_query($db,"SELECT * FROM `book`;");
+            $res= mysqli_query($db,"SELECT * FROM `book` ORDER BY `book`.`name` ASC;");
 
             echo "<table class = 'table table-bordered table-hover'>";
                 echo "<tr style = 'background-color'>";
