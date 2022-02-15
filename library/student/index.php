@@ -7,17 +7,7 @@
         
         <meta charset="utf-8">
         <meta name="viewport" content="width = device-width, initial-scale=1">
-        <style type="text/css">
-            nav{
-                float: right;
-                word-spacing: 30px;
-                padding: 30px;
-            }
-            nav li{
-                display: inline-block;
-                line-height: 80px;
-            }
-        </style>
+   
     </head>
     <body>
         <div class = "wrapper">
