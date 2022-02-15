@@ -102,10 +102,32 @@ input, select {
 }
 
 /*-----------------------Main code ----------------------------------------------*/
+.wrapper{
+    height: 740px;
+    width: 1364px;
+   /* background-color: red;*/
+}
 
+header{
+    height: 130px;
+    width: 1364px;
+    background-color: black;
+}
+
+section{
+    height: 540px;
+    width: 1364px;
+    background-color: grey;
+}
+
+footer{
+    height: 70px;
+    width: 1364px;
+    background-color: black;
+}
 
 /*----------------------------------login.html----------------------------------------------------*/
-
+/*
 #loginimg{
     height: 540px;
     background-image:url(images/stlogimg2.jpg);
@@ -140,7 +162,7 @@ input{
 }
 
 /*-----------------------------------registration.html-----------------------------------------------------*/
-
+/*
 #regimg{
     height: 540px;
     background-image:url(images/signupimg.jpg);
@@ -161,3 +183,4 @@ input{
     color: white;
     padding-right: 40px;
 }
+*/
