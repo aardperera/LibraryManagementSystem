@@ -8,6 +8,7 @@
     <head>
         <title>Student Registration</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="registration.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width = device-width, initial-scale=1">
  
@@ -21,6 +22,11 @@
         }
         .box3{
             height: 500px;
+        }
+        footer{
+            height: 70px;
+            width: 1364px;
+            background-color: black;
         }
     </style>
 </head>
