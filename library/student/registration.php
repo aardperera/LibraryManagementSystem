@@ -42,8 +42,8 @@
             </ul>
         </div>
     </nav>
-    -->
-        </header>
+    
+        </header>-->
         <section>
             <div id="regimg">
                <br>
