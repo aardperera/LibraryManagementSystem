@@ -1,0 +1,33 @@
+
+#loginimg{
+    height: 540px;
+    background-image:url(images/stlogimg2.jpg);
+    background-size: auto;
+    opacity: .7;
+}
+form .login{
+    margin: auto 50px;
+}
+input{
+    height: 25px;
+    width: 300px;
+}
+.box2{
+    height: 330px;
+    width: 400px;
+    background-color: rgb(0, 0, 0);
+    margin: 30px auto;
+    opacity: 0.8;
+    color: white;
+}
+#login{
+    color: white;
+    padding-left: 15px;
+}
+
+.btn-primary{
+    height: 35px;
+    border-color: #02111e;
+    border: 3px;
+    
+}
