@@ -23,11 +23,13 @@
         .box3{
             height: 500px;
         }
+                
         footer{
             height: 70px;
             width: 1364px;
             background-color: black;
         }
+
     </style>
 </head>
 <body>
@@ -50,7 +52,7 @@
             </ul>
         </div>
     </nav>
-   
+    
         </header> -->
         <section>
             <div id="regimg">
