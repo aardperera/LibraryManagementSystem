@@ -21,41 +21,90 @@
             height: 540px;
             background-size: 1364px 540px;
             background-repeat: no-repeat;
-            opacity: 0.7;
+            /*opacity: 0.7;*/
                
+        }
+        .srch{
+            padding-left: 1060px;
         }
 
     </style>
     </head>
     <body>
+        <div class="srch">
+            <form class="navbar-form" method="post" name="form1">
+                    <input class="form-control" type="text" name="search" placeholder="Search books.." required="">
+                    <button type="submit" name="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+            </form>
+        </div>
         <section>
+            <br>
            <h2>List of Books</h2>
                 <?php
-                    $res= mysqli_query($db,"SELECT * FROM `book` ORDER BY `book`.`name` ASC;");
+                    if(isset($_POST['submit'])){
+                        $q = mysqli_query($db, "SELECT * FROM `book` WHERE `name` like '%$_POST[search]%'");
 
-                    echo "<table class = 'table table-bordered table-hover'>";
-                        echo "<tr style = 'background-color'>";
-                            echo "<th>"; echo "Book-Id"; echo "</th>";
-                            echo "<th>"; echo "Name"; echo "</th>";
-                            echo "<th>"; echo "Author's-Name"; echo "</th>";
-                            echo "<th>"; echo "Edition"; echo "</th>";
-                            echo "<th>"; echo "Status"; echo "</th>";
-                            echo "<th>"; echo "Quantity"; echo "</th>";
-                            echo "<th>"; echo "Department"; echo "</th>";
-                        echo "</tr>";
+                        if(mysqli_num_rows($q)==0){
 
-                        while($row=mysqli_fetch_assoc($res)){
-                            echo "<tr>";
-                                echo "<td>"; echo $row['bookId']; echo "</td>";
-                                echo "<td>"; echo $row['name']; echo "</td>";
-                                echo "<td>"; echo $row['author']; echo "</td>";
-                                echo "<td>"; echo $row['edition']; echo "</td>";
-                                echo "<td>"; echo $row['status']; echo "</td>";
-                                echo "<td>"; echo $row['quantity']; echo "</td>";
-                                echo "<td>"; echo $row['department']; echo "</td>";
+                            echo "Sorry! No book found. Try Searching again. ";
+                        
+                        }else{
+                            
+                            echo "<table class = 'table table-bordered table-hover'>";
+                            echo "<tr style = 'background-color: #6db6b9e6;'>";
+                                echo "<th>"; echo "Book-Id"; echo "</th>";
+                                echo "<th>"; echo "Name"; echo "</th>";
+                                echo "<th>"; echo "Author's-Name"; echo "</th>";
+                                echo "<th>"; echo "Edition"; echo "</th>";
+                                echo "<th>"; echo "Status"; echo "</th>";
+                                echo "<th>"; echo "Quantity"; echo "</th>";
+                                echo "<th>"; echo "Department"; echo "</th>";
                             echo "</tr>";
+
+                            while($row=mysqli_fetch_assoc($q)){
+                                echo "<tr>";
+                                    echo "<td>"; echo $row['bookId']; echo "</td>";
+                                    echo "<td>"; echo $row['name']; echo "</td>";
+                                    echo "<td>"; echo $row['author']; echo "</td>";
+                                    echo "<td>"; echo $row['edition']; echo "</td>";
+                                    echo "<td>"; echo $row['status']; echo "</td>";
+                                    echo "<td>"; echo $row['quantity']; echo "</td>";
+                                    echo "<td>"; echo $row['department']; echo "</td>";
+                                echo "</tr>";
+                            }
+                            echo "</table>";        
                         }
-                    echo "</table>";
+                    }else{
+                        $res= mysqli_query($db,"SELECT * FROM `book` ORDER BY `book`.`name` ASC;");
+
+                        echo "<table class = 'table table-bordered table-hover'>";
+                            echo "<tr style = 'background-color: #6db6b9e6;'>";
+                                echo "<th>"; echo "Book-Id"; echo "</th>";
+                                echo "<th>"; echo "Name"; echo "</th>";
+                                echo "<th>"; echo "Author's-Name"; echo "</th>";
+                                echo "<th>"; echo "Edition"; echo "</th>";
+                                echo "<th>"; echo "Status"; echo "</th>";
+                                echo "<th>"; echo "Quantity"; echo "</th>";
+                                echo "<th>"; echo "Department"; echo "</th>";
+                            echo "</tr>";
+    
+                            while($row=mysqli_fetch_assoc($res)){
+                                echo "<tr>";
+                                    echo "<td>"; echo $row['bookId']; echo "</td>";
+                                    echo "<td>"; echo $row['name']; echo "</td>";
+                                    echo "<td>"; echo $row['author']; echo "</td>";
+                                    echo "<td>"; echo $row['edition']; echo "</td>";
+                                    echo "<td>"; echo $row['status']; echo "</td>";
+                                    echo "<td>"; echo $row['quantity']; echo "</td>";
+                                    echo "<td>"; echo $row['department']; echo "</td>";
+                                echo "</tr>";
+                            }
+                        echo "</table>";
+                    }
+
+                    
                 ?>
                 </section>
  <footer>
