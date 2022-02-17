@@ -4,7 +4,7 @@
         <title>Library Management System</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta charset="utf-8">
-         <meta name="viewport" content="width = device-width, initial-scale=1">
+        <meta name="viewport" content="width = device-width, initial-scale=1">
         <style type="text/css">
             nav{
                 float: right;
@@ -15,6 +15,13 @@
                 display: inline-block;
                 line-height: 80px;
             }
+            footer{
+                height: 70px;
+                width: 1364px;
+                background-color: black;
+                margin-top: -70px;
+            }
+            
         </style>
     </head>
     <body>
@@ -51,13 +58,10 @@
                 
                 
             </section>
-            <footer>
-                <p style="color: white; text-align: center;">
-                    <br>
-                    Email: onlinelibraryms@gmail.com <br>
-                    Tel No: +94 712555550
-                </p>
-            </footer>
+            
         </div>
+        <?php
+            include "footer.php";
+        ?>
     </body>
 </html>
