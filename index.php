@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,16 +35,34 @@
                     <img src="images/logo.jpg" height="100px" width="150px">
                     <h1 style="color: white;">LIBRARY MANAGEMENT SYSTEM</h1>
                 </div>
+                <?php
+                    if($_SESSION['login_user']){
+                    ?>
+                         <nav>
+                            <ul>
+                                <li><a href="index.php">HOME</a></li>
+                                <li><a href="books.php">BOOKS</a></li>
+                                <li><a href="login.php">LOGOUT</a></li>
+                                <li><a href="feedback.php">FEEDBACK</a></li>
+                            </ul>
+                        </nav>
+                    <?php        
+                    }else{
+                    ?>
+                        <nav>
+                            <ul>
+                                <li><a href="index.php">HOME</a></li>
+                                <li><a href="books.php">BOOKS</a></li>
+                                <li><a href="login.php">LOGIN</a></li>
+                                <li><a href="registration.php">REGISTER</a></li>
+                                <li><a href="feedback.php">FEEDBACK</a></li>
+                            </ul>
+                        </nav>
+                    <?php    
+                    }
+                ?>
 
-                <nav>
-                    <ul>
-                        <li><a href="index.php">HOME</a></li>
-                        <li><a href="books.php">BOOKS</a></li>
-                        <li><a href="login.php">LOGIN</a></li>
-                        <li><a href="registration.php">REGISTER</a></li>
-                        <li><a href="feedback.php">FEEDBACK</a></li>
-                    </ul>
-                </nav>
+                
             </header>
             <section>
                 <div id="homeimg">
