@@ -1,6 +1,7 @@
 <?php
     include "connection.php";
     include "navbar.php";
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -84,6 +85,8 @@
                         </script>
                     <?php
                 }else{
+                    $_SESSION['login_user'] = $_POST['username'];
+                     
                     ?>
                         <script type="text/javascript">
                             window.location = "index.php";
