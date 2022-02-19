@@ -36,7 +36,7 @@
                     <h1 style="color: white;">LIBRARY MANAGEMENT SYSTEM</h1>
                 </div>
                 <?php
-                    if($_SESSION['login_user']){
+                    if(isset($_SESSION['login_user'])){
                     ?>
                          <nav>
                             <ul>
