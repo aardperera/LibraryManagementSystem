@@ -1,10 +1,14 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>Library Management System</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta charset="utf-8">
-         <meta name="viewport" content="width = device-width, initial-scale=1">
+        <meta name="viewport" content="width = device-width, initial-scale=1">
         <style type="text/css">
             nav{
                 float: right;
@@ -15,6 +19,13 @@
                 display: inline-block;
                 line-height: 80px;
             }
+            footer{
+                height: 70px;
+                width: 1364px;
+                background-color: black;
+                margin-top: -70px;
+            }
+            
         </style>
     </head>
     <body>
@@ -24,16 +35,34 @@
                     <img src="images/logo.jpg" height="100px" width="150px">
                     <h1 style="color: white;">LIBRARY MANAGEMENT SYSTEM</h1>
                 </div>
+                <?php
+                    if(isset($_SESSION['login_user'])){
+                    ?>
+                         <nav>
+                            <ul>
+                                <li><a href="index.php">HOME</a></li>
+                                <li><a href="books.php">BOOKS</a></li>
+                                <li><a href="logout.php">LOGOUT</a></li>
+                                <li><a href="feedback.php">FEEDBACK</a></li>
+                            </ul>
+                        </nav>
+                    <?php        
+                    }else{
+                    ?>
+                        <nav>
+                            <ul>
+                                <li><a href="index.php">HOME</a></li>
+                                <li><a href="books.php">BOOKS</a></li>
+                                <li><a href="login.php">LOGIN</a></li>
+                                <li><a href="registration.php">REGISTER</a></li>
+                                <li><a href="feedback.php">FEEDBACK</a></li>
+                            </ul>
+                        </nav>
+                    <?php    
+                    }
+                ?>
 
-                <nav>
-                    <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="books.html">BOOKS</a></li>
-                        <li><a href="login.html">LOGIN</a></li>
-                        <li><a href="registration.html">REGISTER</a></li>
-                        <li><a href="feedback.html">FEEDBACK</a></li>
-                    </ul>
-                </nav>
+                
             </header>
             <section>
                 <div id="homeimg">
@@ -51,13 +80,10 @@
                 
                 
             </section>
-            <footer>
-                <p style="color: white; text-align: center;">
-                    <br>
-                    Email: onlinelibraryms@gmail.com <br>
-                    Tel No: +94 712555550
-                </p>
-            </footer>
+            
         </div>
+        <?php
+            include "footer.php";
+        ?>
     </body>
 </html>
