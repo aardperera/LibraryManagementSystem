@@ -36,7 +36,8 @@
                         <li><a href="">
                             <div style="color: white;">
                                 <?php
-                                    echo "Welcome ".$_SESSION['login_user'];
+                                    echo "<img class = 'img-circle profile_img' src= 'images/".$_SESSION['pic']."'>";
+                                    echo $_SESSION['login_user'];
                                 ?>
                             </div>
                         </a></li>
