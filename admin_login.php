@@ -75,6 +75,9 @@
             if(isset($_POST['submit'])){
                 $count = 0;
                 $res = mysqli_query($db,"SELECT * FROM `admin` WHERE username='$_POST[username]' && password='$_POST[password]';");
+                
+                $row = mysqli_fetch_assoc($res);
+                
                 $count = mysqli_num_rows($res);
 
                 if($count == 0){
@@ -85,6 +88,7 @@
                     <?php
                 }else{
                     $_SESSION['login_user'] = $_POST['username'];
+                    $_SESSION['pic'] = $row['pic'];
                      
                     ?>
                         <script type="text/javascript">
