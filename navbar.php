@@ -29,6 +29,10 @@
                 <?php
                 if(isset($_SESSION['login_user'])){
                 ?>
+                    <ul class="nav navbar-nav">
+                        <li><a href="profile.php">PROFILE</a></li>
+                    </ul>
+
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="">
                             <div style="color: white;">
