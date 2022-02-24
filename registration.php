@@ -91,7 +91,7 @@
                     }
                 }
                 if($count==0){
-                    mysqli_query($db, "INSERT INTO `STUDENT` VALUES('$_POST[first]', '$_POST[last]','$_POST[username]','$_POST[password]','$_POST[indexno]','$_POST[email]','$_POST[telno]');");
+                    mysqli_query($db, "INSERT INTO `STUDENT` VALUES('$_POST[first]', '$_POST[last]','$_POST[username]','$_POST[password]','$_POST[indexno]','$_POST[email]','$_POST[telno]', 'profile.png');");
                     ?>
                         <script type="text/javascript">
                             alert("Registration successful!");
